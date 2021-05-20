@@ -3,31 +3,27 @@
 Software—the foundation of discovery in computational science & engineering—faces increasing complexity in computational models and computer architectures. BSSw provides a central hub for the community to address pressing challenges in software productivity, quality, and sustainability.
 
 <!---
-Slide1 L: blog_posts/testing-non-deterministic-research-software
-Slide1 R: images/raw/master/Blog_0820_Testing.png
-Slide2 L: blog_posts/increasing-productivity-by-broadening-participation-in-scientific-software-communities
-Slide2 R: images/raw/master/Blog_0920_BroadPartic.png
-Slide3 L: blog_posts/what-does-this-line-do-the-challenge-of-writing-a-well-documented-code
-Slide3 R: images/raw/master/Blog_0920_QuadF3.png
-Slide4 L: items/digging-deeper-into-agile-software-development
-Slide4 R: items/a-list-of-free-online-programming-and-computer-science-courses
-Slide5 L: events/webinar-scalable-precision-tuning-of-numerical-software
-Slide5 R: events/events/panel-sustainable-hybrid-approaches
+Slide1 L: blog_posts/blog_posts/a-gentle-introduction-to-gpu-programming
+Slide1 R: images/raw/master/Blog_0521_GPU.png
+Slide2 L: blog_posts/encouraging-effective-retrospective-strategies-for-team-projects
+Slide2 R: items/keep-interest-on-technical-debt-from-sinking-your-software-project
+Slide3 L: blog_posts/use-of-software-metrics-in-research-software
+Slide3 R: images/raw/master/Blog_0421_Metrics.jpg
+Slide4 L: blog_posts/a-look-at-software-focused-topics-at-siam-cse21
+Slide4 R: images/raw/master/Blog_0321_Siam.png
+Slide5 L: items/kanban-and-scrum-making-the-best-of-both
+Slide5 R: events/2021-collegeville-workshop-on-scientific-software-software-teams
+Slide6 L: events/2021-us-rse-virtual-workshop
+Slide6 R: events/webinar-automated-fortran-c-bindings-for-large-scale-scientific-applications
 --->
 
-<!---
-LCM: Saving for use again later
 
-Slide1 Left: blog_posts/scientific-software-projects-and-their-communities
-Slide 1 Right: items/resources-for-maximizing-remote-working
-Slide2 Left: blog_posts/cleaning-your-work-surfaces-one-way-to-help-flatten-the-curve
-Slide2 Right: images/raw/master/Blog_0320_COVID19.png
-Slide3 Left: blog_posts/spreading-ideas-about-better-scientific-software
-Slide3 Right: images/raw/master/Blog_0225_Computational.jpg
-Slide4 Left: blog_posts/productivity-and-sustainability-improvement-planning-psip
-Slide4 Right: images/raw/master/Blog_0120_PSIP_logo.png
-Slide5 Left: items/finalizing-your-julia-package
-Slide5 Right: events/webinar-best-practices-for-using-proxy-applications-as-benchmarks
+
+<!---
+Caution: Blank line after first comment mark (or before last comment mark) causes build failure.
+LCM: Saving for use again later
+Slide4 L: blog_posts/when-not-to-use-agile-in-scientific-software-development
+Slide4 R: images/raw/master/Blog_0221_Agile.png
 --->
 
 <!---
