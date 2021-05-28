@@ -7,7 +7,7 @@
 #### Contributed by: [Rinku Gupta](https://github.com/rinkug), [Avanthi Madduri](https://github.com/mantrala-ops) and [Deborah Stevens](https://github.com/haikudeb)
 #### Publication Date: May 26, 2021
 
-In March 2020, the Exascale Computing Project (ECP) organized a series of Community Birds-of-a-Feather (BOF) Days to provide an opportunity for the HPC and ECP communities to converge and discuss the latest development efforts. The BSSw.io editorial team led a community BOF on *"Cultivating Software Sustainability, Productivity and Quality through BSSw.io"*. This session was a great success, with over 50 attendees representing academia, national laboratories and supercomputing centers. 
+In March 2021, the Exascale Computing Project (ECP) organized a series of Community Birds-of-a-Feather (BOF) Days to provide an opportunity for the HPC and ECP communities to converge and discuss the latest development efforts. The BSSw.io editorial team led a community BOF on *"Cultivating Software Sustainability, Productivity and Quality through BSSw.io"*. This session was a great success, with over 50 attendees representing academia, national laboratories and supercomputing centers. 
 
 Avanthi Madduri and Deborah Stevens, from the [Argonne Leadership Computing Facility](https://www.alcf.anl.gov/), interview Rinku Gupta. Rinku was the lead organizer of the BSSw.io community BOF and also serves as Editor-in-Chief of the BSSw.io site.
 
@@ -31,7 +31,7 @@ Our submission process is managed using our GitHub repository. For users familia
 
 **Deborah:** I understand there were several focused topic discussions that took place at the BSSw.io community BOF. Could you talk a bit about them?
 
-**Rinku**: The BOF included had several breakout groups, ranging from a hands-on session on writing your first piece of BSSw.io content, to community discussion on what topics would be impactful, as well as discussion on existing resources for software sustainability and productivity. Even though the BOF lasted only 90 minutes, the attendees managed to cover a broad range of topics. Some of the topics focused on:
+**Rinku**: The BOF included several breakout groups, ranging from a hands-on session on writing your first piece of BSSw.io content, to community discussion on what topics would be impactful, as well as discussion on existing resources for software sustainability and productivity. Even though the BOF lasted only 90 minutes, the attendees managed to cover a broad range of topics. Some of the topics focused on:
 
 * **The need for more awareness**.  Across the scientific community, more awareness and focus are needed on software sustainability and productivity.  BOF participant recommendations ranged from suggestions for funding agencies to devote explicit funding to these topics, to having community BOFs at regular intervals, to showing public appreciation for teams who are already incorporating strong practices in these areas. 
 
