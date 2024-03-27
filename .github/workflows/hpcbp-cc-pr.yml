@@ -1,0 +1,12 @@
+# Update HPC Best Practices webinar series curated content from ideas-productivity.org site
+name: Create PR to update hpcbp-cc article
+
+on:
+  workflow_dispatch:
+
+jobs:
+  hpcbp-cc-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
