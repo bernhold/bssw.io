@@ -15,7 +15,7 @@ jobs:
       - name: Check the file is there
         run: |
           ls -l CuratedContent/hpcbp-webinars-cc.md
-          cp CuratedContent/hpcbp-webinars-cc.md.bak
+          cp CuratedContent/hpcbp-webinars-cc.md CuratedContent/hpcbp-webinars-cc.md.bak
 
       - name: Download the new curated content article
         uses: carlosperate/download-file-action@v2
