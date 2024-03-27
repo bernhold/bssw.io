@@ -1,5 +1,5 @@
 # Update HPC Best Practices webinar series curated content from ideas-productivity.org site
-name: Create PR to update hpcbp-cc article
+name: Create PR to update hpcbp-webinars-cc article
 
 on:
   workflow_dispatch:
@@ -14,6 +14,7 @@ jobs:
 
       - name: Check the file is there
         run: ls -l CuratedContent/hpcbp-webinars-cc.md
+        run: cp CuratedContent/hpcbp-webinars-cc.md.bak
 
       - name: Download the new curated content article
         uses: carlosperate/download-file-action@v2
@@ -22,8 +23,6 @@ jobs:
           location: 'CuratedContent'
           file-name: hpcbp-webinars-cc.md
 
-      - name: Print the file path (new-folder-to-be-created/new_filename.tar.gz)
-        run: echo "The file was downloaded to ${{ steps.download-file.outputs.file-path }}"
-
       - name: Check the file is there
         run: ls -l CuratedContent/hpcbp-webinars-cc.md
+        run: diff -c CuratedContent/hpcbp-webinars-cc.md CuratedContent/hpcbp-webinars-cc.md.bak
