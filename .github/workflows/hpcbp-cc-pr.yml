@@ -38,5 +38,7 @@ jobs:
           assignees: ${{ github.actor }}
           commit-message: "Updating HPC-BP webinar curated content from the ideas-productivity.org website"
           body: "Updating HPC-BP webinar curated content from the ideas-productivity.org website"
-          labels: content: curated, content: updates
-
+          labels: |
+            content: curated
+            content: updates
+            
