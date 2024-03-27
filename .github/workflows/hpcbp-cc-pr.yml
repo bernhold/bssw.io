@@ -9,4 +9,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+
+      - name: Check the file is there
+        run: ls -l CuratedContent/hpcbp-webinars-cc.md
+
+      - name: Download the new curated content article
+        uses: carlosperate/download-file-action@v2
+        with:
+          file-url: https://ideas-productivity.org/internal/hpcbp-webinars/hpcbp-webinars-cc.md
+          location: 'CuratedContent'
+          file-name: hpcbp-webinars-cc.md
+
+      - name: Print the file path (new-folder-to-be-created/new_filename.tar.gz)
+        run: echo "The file was downloaded to ${{ steps.download-file.outputs.file-path }}"
+
+      - name: Check the file is there
+        run: ls -l CuratedContent/hpcbp-webinars-cc.md
