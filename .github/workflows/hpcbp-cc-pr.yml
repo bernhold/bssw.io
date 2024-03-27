@@ -1,5 +1,5 @@
 # Update HPC Best Practices webinar series curated content from ideas-productivity.org site
-name: Create PR to update hpcbp-webinars-cc article
+name: Update hpcbp-webinars-cc from ideas-productivity.org
 
 on:
   workflow_dispatch:
@@ -38,5 +38,5 @@ jobs:
           assignees: ${{ github.actor }}
           commit-message: "Updating HPC-BP webinar curated content from the ideas-productivity.org website"
           body: "Updating HPC-BP webinar curated content from the ideas-productivity.org website"
-          # labels: 'content: curated', 'content: updates'
+          labels: 'content: curated', 'content: updates'
 
