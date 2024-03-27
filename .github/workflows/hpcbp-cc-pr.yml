@@ -31,3 +31,11 @@ jobs:
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v6
+        with:
+          title: Update HPC-BP webinar curated content
+          commit-message: |
+            Updating HPC-BP webinar curated content from the ideas-productivity.org website
+          labels: "content: curated", "content: updates"
+          assignees: ${{ github.actor }}
+          branch: ${{ github.actor }}-hpcbp-webinars-cc-update
+          branch-suffix: timestamp
