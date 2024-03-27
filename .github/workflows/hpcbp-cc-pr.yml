@@ -24,5 +24,4 @@ jobs:
           file-name: hpcbp-webinars-cc.md
 
       - name: Check the file is there
-        run: ls -l CuratedContent/hpcbp-webinars-cc.md
-        run: diff -c CuratedContent/hpcbp-webinars-cc.md CuratedContent/hpcbp-webinars-cc.md.bak
+        run: ls -l CuratedContent/hpcbp-webinars-cc.md && diff -c CuratedContent/hpcbp-webinars-cc.md CuratedContent/hpcbp-webinars-cc.md.bak
