@@ -32,16 +32,22 @@ jobs:
         run: |
           ls -l Events/${{ inputs.event-file }}.md || :
 
-      # - name: Create pull request
-      #   uses: peter-evans/create-pull-request@v6
-      #   with:
-      #     title: Update HPC-BP webinar curated content
-      #     branch: ${{ github.actor }}-hpcbp-webinars-cc-update
-      #     branch-suffix: timestamp
-      #     assignees: ${{ github.actor }}
-      #     commit-message: "Updating HPC-BP webinar curated content from the ideas-productivity.org website"
-      #     body: "Updating HPC-BP webinar curated content from the ideas-productivity.org website"
-      #     labels: |
-      #       content: curated
-      #       content: updates
+      - name: Create pull request
+        id: cpr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          title: Add new HPC-BP webinar event
+          branch: ${{ github.actor }}-hpcbp-new-event
+          branch-suffix: timestamp
+          assignees: ${{ github.actor }}
+          commit-message: "Adding new HPC-BP webinar event from the ideas-productivity.org website"
+          body: "Adding new HPC-BP webinar event from the ideas-productivity.org website"
+          labels: |
+            content: event
+
+      - name: Check outputs
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
             
