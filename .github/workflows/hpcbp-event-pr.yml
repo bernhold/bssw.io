@@ -28,9 +28,9 @@ jobs:
           location: 'Events'
           file-name: ${{ inputs.event-file }}.md
 
-      # - name: Check that the file has been updated
-      #   run: |
-      #   ls -l Events/${{ inputs.event-file }}.md
+          - name: Check the file is there
+          run: |
+            ls -l Events/${{ inputs.event-file }}.md || :
 
       # - name: Create pull request
       #   uses: peter-evans/create-pull-request@v6
