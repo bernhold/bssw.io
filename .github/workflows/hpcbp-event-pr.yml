@@ -1,5 +1,5 @@
 # Add new HPC Best Practices webinar event from ideas-productivity.org site
-name: Add new hpcbp event from ideas-productivity.org
+name: "HPC-BP: add new event from ideas-productivity.org"
 
 on:
   workflow_dispatch:
@@ -17,9 +17,9 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v4
 
-      - name: Check the file is there
-        run: |
-          ls -l Events/${{ inputs.event-file }}.md || :
+      # - name: Check the file is there
+      #   run: |
+      #     ls -l Events/${{ inputs.event-file }}.md || :
 
       - name: Download the new curated content article
         uses: carlosperate/download-file-action@v2
@@ -28,9 +28,9 @@ jobs:
           location: 'Events'
           file-name: ${{ inputs.event-file }}.md
 
-      - name: Check the file is there
-        run: |
-          ls -l Events/${{ inputs.event-file }}.md || :
+      # - name: Check the file is there
+      #   run: |
+      #     ls -l Events/${{ inputs.event-file }}.md || :
 
       - name: Create pull request
         id: cpr
