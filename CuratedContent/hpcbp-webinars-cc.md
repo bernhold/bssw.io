@@ -27,7 +27,7 @@ The webinar series is produced by the [IDEAS Productivity Project](https://ideas
 
 ## Past Webinars
 
-*Listed in reverse chronological order. Last updated: 2024-03-27*
+*Listed in reverse chronological order. Last updated: 2024-04-02*
 
 - 2024-03-20: [Code Review for Scientific Software: Experiences building an online tutorial](https://ideas-productivity.org/events/hpcbp-082-codereview), presented by Helen Kershaw (NSF National Center for Atmospheric Research)
 
@@ -195,7 +195,7 @@ The webinar series is produced by the [IDEAS Productivity Project](https://ideas
 
 #### Contributed by [Osni Marques](https://github.com/oamarques)
 
-#### Publication date: 2024-03-27
+#### Publication date: 2024-04-02
 
 <!---
 Publish: yes
