@@ -1,5 +1,5 @@
 # Update HPC Best Practices webinar series curated content article from ideas-productivity.org site
-name: "HPC-BP: update curated content article from ideas-productivity.org
+name: "HPC-BP: update curated content article from ideas-productivity.org"
 
 on:
   workflow_dispatch:
