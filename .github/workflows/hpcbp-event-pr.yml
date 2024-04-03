@@ -45,9 +45,14 @@ jobs:
           labels: |
             content: event
 
-      - name: Check outputs
+      - name: Check PR results
         if: ${{ steps.cpr.outputs.pull-request-number }}
         run: |
           echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
           echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
+
+      - name: Merge PR
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          gh pr merge --merge --body "Automatically merging script-generated event"
             
