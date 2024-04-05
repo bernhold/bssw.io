@@ -53,7 +53,7 @@ jobs:
 
       - name: Get PR ID
         id: pr-id
-         env:
+        env:
           GH_TOKEN: ${{ github.token }}
         run: |
           pr_id=$(gh pr view ${{ steps.cpr.outputs.pull-request-url }} --json id --jq ".id")
