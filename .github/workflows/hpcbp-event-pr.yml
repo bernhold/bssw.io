@@ -62,7 +62,7 @@ jobs:
 
       - name: Check PR ID
         run: |
-          echo "Pull Request ID - ${{ steps.pr-id.pr-id }}"
+          echo "Pull Request ID - ${{ steps.pr-id.outputs.pr-id }}"
 
       # - name: Merge PR
       #   if: ${{ steps.cpr.outputs.pull-request-number }}
