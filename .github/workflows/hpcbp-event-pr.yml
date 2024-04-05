@@ -57,6 +57,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           pr_id=$(gh pr view ${{ steps.cpr.outputs.pull-request-url }} --json id --jq ".id")
+          echo Pull request id = $pr_id
           echo "pr-id=$pr_id" >> $GITHUB_OUTPUT
 
       - name: Check PR ID
