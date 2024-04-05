@@ -70,7 +70,7 @@ jobs:
           pr_id=$(gh pr view ${{ steps.cpr.outputs.pull-request-url }} --json id --jq ".id")
           echo Pull request id = $pr_id
           # Add pull request to column
-          gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" -f "{\"content_type\": \"PullRequest\", \"content_id\": \"$pr_id\"}" /projects/columns/$col_id/cards
+          gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" -f content_type="PullRequest" -f content_id=$pr_id /projects/columns/$col_id/cards
 
     #       curl -s -X POST -u "$GITHUB_ACTOR:$TOKEN" --retry 3 \
     #  -H 'Accept: application/vnd.github.inertia-preview+json' \
