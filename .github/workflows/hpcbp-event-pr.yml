@@ -51,10 +51,16 @@ jobs:
           echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
           echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
 
-      - name: Merge PR
-        if: ${{ steps.cpr.outputs.pull-request-number }}
-        env:
-          GH_TOKEN: ${{ secrets.PR_MERGE_PAT }}
+      - name: Get PR ID
+        id: pr-id
         run: |
-          gh pr merge ${{ steps.cpr.outputs.pull-request-number }} --merge --auto --body "Automatically merging script-generated event"
+          gh pr view ${{ steps.cpr.outputs.pull-request-number }} --json id --jq ".id" >> $GITHUB_OUTPUT
+          echo Pull request 
+
+      # - name: Merge PR
+      #   if: ${{ steps.cpr.outputs.pull-request-number }}
+      #   env:
+      #     GH_TOKEN: ${{ secrets.PR_MERGE_PAT }}
+      #   run: |
+      #     gh pr merge ${{ steps.cpr.outputs.pull-request-number }} --merge --auto --body "Automatically merging script-generated event"
             
