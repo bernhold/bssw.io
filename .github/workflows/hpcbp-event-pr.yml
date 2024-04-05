@@ -62,8 +62,8 @@ jobs:
           echo "pr-id=$pr_id" >> $GITHUB_OUTPUT
 
       - name: Check PR ID
-          run: |
-            echo "Pull Request ID - ${{ steps.pr-id.pr-id }}"
+        run: |
+          echo "Pull Request ID - ${{ steps.pr-id.pr-id }}"
 
       # - name: Merge PR
       #   if: ${{ steps.cpr.outputs.pull-request-number }}
