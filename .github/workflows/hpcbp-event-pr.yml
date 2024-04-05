@@ -64,6 +64,18 @@ jobs:
         run: |
           echo "Pull Request ID - ${{ steps.pr-id.outputs.pr-id }}"
 
+      - name: Find the target project and column we want to add the PR to
+        id: project-info
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          proj_id=$(gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /repos/bernhold/bssw.io-bernhold/projects --jq ".[] | select(.name == \"Content Development\") | .id")
+          col_id=$(gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /projects/$proj_id/columns --jq ".[] | select(.name == \"Ready for digest\") | .id")
+          echo Project board id = $proj_id
+          echo Column id = $col_id
+          echo "proj_id=$proj_id" >> $GITHUB_OUTPUT
+          echo "col_id=$col_id" >> $GITHUB_OUTPUT
+
       # - name: Merge PR
       #   if: ${{ steps.cpr.outputs.pull-request-number }}
       #   env:
