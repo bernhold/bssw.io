@@ -1,48 +1,31 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			   
-
-<!-- Note: this label does NOT include the trailing colon -->
-
-
-
-
-
 # Webinar: What All Codes Should Do:  Overview of Best Practices in HPC Software Development
 
-- Date: 2016-05-04
+- Event Date: 2016-05-04
 - Location: Online
-- Event Website: https://ideas-productivity.org/resources/series/hpc-best-practices-webinars/#webinar001
+- Event Website: <https://ideas-productivity.org/events/hpcbp-001-all-codes>
 - Organizers: The IDEAS Productivity Project
-			   
+
+
+
 This event is a part of the "Best Practices for HPC Software
 Developers" webinar series, produced by the IDEAS Productivity
 Project. The HPC Best Practices webinars address issues faced by
 developers of computational science and engineering (CSE) software on
 high-performance computers (HPC) and occur approximately monthly.
 
+
 Resource Information | Details
 :--- | :---			   
 Webinar Title | What All Codes Should Do:  Overview of Best Practices in HPC Software Development
-Date and Time | 2016-05-04 02:00 pm EDT
-Presenter | Anshu Dubey (<a href="http://www.anl.gov/">Argonne National Laboratory</a>)
-Registration, Information, and Archives | 	<https://ideas-productivity.org/resources/series/hpc-best-practices-webinars/#webinar001>	   
+Date and Time | 2016-05-04 01:00 pm - 02:00 pm EDT
+Presenter | Anshu Dubey (Argonne National Laboratory)
+Registration, Information, and Archives | 	<https://ideas-productivity.org/events/hpcbp-001-all-codes>
+Presentation Language | English	   
 
-**Webinars are free and open to the public, but advance registration is required through the Event website. Archives (recording, slides, Q&A) will be posted at the same link soon after the event.**
+**Webinars are free and open to the public, but advance registration is required through the Event website. Archives (recording, slides, Q&A) will be posted at the same link soon after the event, and all registrants will be notified.**
 
 ### Abstract
+
 <p>Scientific code developers have increasingly been adopting software
 processes derived from the mainstream (non-scientific) community.
 Software practices are typically adopted when continuing without them
@@ -57,24 +40,18 @@ been found to be useful by science communities, and we will provide
 guidelines for adoption of practices based on the size and the scope
 of the project.</p>
 
+### Presenter
 
-    
+- Anshu Dubey (Argonne National Laboratory)
 
-#### Contributed by [Anshu Dubey](https://github.com/adubey64 "Anshu Dubey GitHub profile")
+### Presenter Bio
 
-#### Publication date: May 04, 2016
+<p>Anshu Dubey is a Computer Scientist in the Mathematics and Computer Science Division at Argonne National Laboratory and a Senior Scientist in the Department of Computer Science at the University of Chicago. She is the chief software architect for FLASH, a multiphysics multiscale HPC software that is used by several science and engineering domains as their community code. She is interested in all aspects of HPC scientific software with special emphasis on design, productivity, and sustainability issues.</p>
+
+#### Contributed by [Anshu Dubey](https://github.com/adubey64)
+
 
 <!---
 Publish: yes
-Categories: skills
 Topics: online learning
-Level: 2
-Prerequisites: default
-Aggregate: none
 --->
-
-
-
-
-
-
