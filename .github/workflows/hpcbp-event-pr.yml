@@ -69,7 +69,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          proj_id=$(gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /repos/bernhold/bssw.io-bernhold/projects --jq ".[] | select(.name == \"Content Development\") | .id")
+          proj_id=$(gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /repos/bernhold/bssw.io/projects --jq ".[] | select(.name == \"Content Development\") | .id")
           col_id=$(gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /projects/$proj_id/columns --jq ".[] | select(.name == \"Ready for digest\") | .id")
           echo Project board id = $proj_id
           echo Column id = $col_id
