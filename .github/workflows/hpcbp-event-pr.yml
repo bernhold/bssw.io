@@ -51,30 +51,31 @@ jobs:
           echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
           echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
 
-      - name: Get PR ID
-        id: pr-id
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          pr_id=$(gh pr view ${{ steps.cpr.outputs.pull-request-url }} --json id --jq ".id")
-          echo Pull request id = $pr_id
-          echo "pr-id=$pr_id" >> $GITHUB_OUTPUT
-
-      - name: Check PR ID
-        run: |
-          echo "Pull Request ID - ${{ steps.pr-id.outputs.pr-id }}"
-
-      - name: Find the target project and column we want to add the PR to
+      - name: Add pull request to appropriate project column
         id: project-info
         env:
           GH_TOKEN: ${{ github.token }}
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.event.repository.name }}
+          PROJ_NAME: "Content Development"
+          COL_NAME: "Ready for digest"
         run: |
-          proj_id=$(gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /repos/bernhold/bssw.io/projects --jq ".[] | select(.name == \"Content Development\") | .id")
-          col_id=$(gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /projects/$proj_id/columns --jq ".[] | select(.name == \"Ready for digest\") | .id")
+          # Get project id
+          proj_id=$(gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /repos/$OWNER/$REPO/projects --jq ".[] | select(.name == \"$PROJ_NAME\") | .id")
+          # Get column id
+          col_id=$(gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /projects/$proj_id/columns --jq ".[] | select(.name == \"$COL_NAME\") | .id")
           echo Project board id = $proj_id
           echo Column id = $col_id
-          echo "proj_id=$proj_id" >> $GITHUB_OUTPUT
-          echo "col_id=$col_id" >> $GITHUB_OUTPUT
+          # Get pull request id
+          pr_id=$(gh pr view ${{ steps.cpr.outputs.pull-request-url }} --json id --jq ".id")
+          echo Pull request id = $pr_id
+          # Add pull request to column
+          gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" -f "{\"content_type\": \"PullRequest\", \"content_id\": $pr_id}" /projects/columns/$col_id/cards
+
+    #       curl -s -X POST -u "$GITHUB_ACTOR:$TOKEN" --retry 3 \
+    #  -H 'Accept: application/vnd.github.inertia-preview+json' \
+    #  -d "{\"content_type\": \"PullRequest\", \"content_id\": $PULL_REQUEST_ID}" \
+    #  "https://api.github.com/projects/columns/$INITIAL_COLUMN_ID/cards"
 
       # - name: Merge PR
       #   if: ${{ steps.cpr.outputs.pull-request-number }}
