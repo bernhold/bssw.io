@@ -13,6 +13,8 @@ By submitting your content, you acknowledge and agree to the following...
    - Content should not infringe on any third-party copyrights or intellectual property rights.
    - Content should not contain sensitive or personal information.
    - Content should be free from offensive, illegal, or otherwise harmful material.
+  
+Change for change sake
 
 <!---
 Publish: No
