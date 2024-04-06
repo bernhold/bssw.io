@@ -16,6 +16,9 @@ jobs:
     - name: Print diagnostic information
       run: |
         echo GITHUB_EVENT_PATH = $GITHUB_EVENT_PATH
+        echo ---
+        cat $GITHUB_EVENT_PATH
+        echo ---
         echo github.event.issue.id = ${{ github.event.issue.id }}
         echo github.event.pull_request.id = ${{ github.event.pull_request.id }}
     - name: Assign site-internal ISSUES to the INTERNAL board
