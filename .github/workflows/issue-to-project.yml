@@ -13,6 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Assign to proper board based on labels
     steps:
+    - name: Print diagnostic information
+      run: |
+        echo GITHUB_EVENT_PATH = $GITHUB_EVENT_PATH
+        echo github.event.issue.id = ${{ github.event.issue.id }}
+        echo github.event.pull_request.id = ${{ github.event.pull_request.id }}
     - name: Assign site-internal ISSUES to the INTERNAL board
       uses: srggrs/assign-one-project-github-action@1.2.1
       if: |
